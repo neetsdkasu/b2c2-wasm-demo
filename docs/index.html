@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@neetsdkasu" />
+        <meta name="twitter:creator" content="@neetsdkasu" />
+        <meta property="og:url" content="https://neetsdkasu.github.io/b2c2-wasm-demo/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="og:title" content="b2c2-web-demo" />
+        <meta property="og:image" content="https://neetsdkasu.github.io/b2c2-wasm-demo/card.png" />
+        <meta property="og:description" content="BASIC言語風の独自のプログラミング言語(?)のソースコードファイルからCASL2のソースコードファイルを生成しました" />
+        <title>b2c2 Webデモ</title>
+        <link rel="stylesheet" href="./lib/codemirror.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./lib/codemirror.js"></script>
+        <script src="./mode/b2c2.js"></script>
+        <script src="./mode/casl2.js"></script>
+    </head>
+    <body>
+        <header>
+            <h2>b2c2 Webデモ</h2>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/neetsdkasu/b2c2/blob/main/doc/language.md" class="exit">
+                            b2c2 言語仕様
+                        </a></li>
+                    <li><a href="https://github.com/neetsdkasu/b2c2/tree/main/basic_src_examples" class="exit">
+                            b2c2 コード例集
+                        </a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p>BASIC言語風の独自のプログラミング言語(?)のソースコードファイルからCASL2のソースコードファイルを生成しました</p>
+
+            <p>※CASL2コードはIPAのCASL II シミュレータ（Java,V2.00(2005/05/27))で一応は動作確認済みです</p>
+            <hr />
+            <h5>BASICソースコード</h5>
+            <textarea name="b2c2_src" id="b2c2_src" rows="22" cols="80">'
+' FIZZ BUZZ (1)
+'
+DIM I AS INTEGER
+DIM C AS INTEGER
+PRINT "LIMIT?"
+INPUT C
+C = MAX(1, MIN(100, C))
+FOR I = 1 TO C STEP 1
+    SELECT CASE I MOD 15
+        CASE 0
+            PRINT "FIZZBUZZ"
+        CASE 3, 6, 9, 12
+            PRINT "FIZZ"
+        CASE 5, 10
+            PRINT "BUZZ"
+        CASE ELSE
+            PRINT I
+    END SELECT
+NEXT I
+</textarea>
+            <div><button disabled id="compile">CASL2コードへ変換！</button></div>
+            <hr />
+            <h5>CASL2ソースコード</h5>
+            <textarea name="casl2_src" id="casl2_src" rows="40" cols="80"></textarea>
+            <hr />
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/neetsdkasu/b2c2" class="exit">
+                            b2c2のGitHubリポジトリへ
+                        </a></li>
+                    <li><a href="https://github.com/neetsdkasu/b2c2-wasm-demo" class="exit">
+                            b2c2 WebデモのGitHubリポジトリへ
+                        </a></li>
+                </ul>
+            </nav>
+
+            <p>
+                シェア:
+                <a href="https://b.hatena.ne.jp/entry/s/neetsdkasu.github.io/b2c2-wasm-demo/" class="hatena-bookmark-button">B!ブックマーク</a>
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fneetsdkasu.github.io%2Fb2c2-wasm-demo%2F&text=CASL2%E3%81%A7FizzBuzz&via=neetsdkasu">Twitter</a>
+                <a class="facebook-share-button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fneetsdkasu.github.io%2Fb2c2-wasm-demo">facebook</a>
+            </p>
+
+            <br />
+
+            <p class="note">※このページのテキストエリア(コードエディタ)は<a href="https://github.com/codemirror/CodeMirror" rel="external nofollow noreferrer">CodeMirror</a>を使用しています</p>
+            <p class="note">※Webデモで使用しているJavaScriptファイルおよびWebAssemblyファイルは<a href="https://github.com/rustwasm/wasm-pack" rel="external nofollow noreferrer">wasm-pack</a>で生成しました</p>
+        </footer>
+        <script src="./index.js" type="module"></script>
+    </body>
+</html>

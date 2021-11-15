@@ -1,0 +1,66 @@
+
+body {
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+textarea {
+    font-family: monospace;
+    resize: both;
+}
+
+.CodeMirror {
+    resize: both;
+}
+
+.note {
+    font-size: 12px;
+}
+
+.note > a {
+    background: url('exit.png') no-repeat 100% 0;
+    background-size: 12px 12px;
+    padding-right: 14px;    
+}
+
+footer { margin-top: 2rem; }
+.comment { color: #555; }
+.cmd { color: #B03; }
+.comet2 { color: #070; }
+.label { color: #039; }
+a.exit { 
+    background: url('exit.png') no-repeat 100% 0;
+    background-size: 12px 12px;
+    padding-right: 14px;
+    font-size: 12px; 
+}
+pre.code {
+    background-color: #F4F4F4;
+    padding-left: 1rem;
+}
+.facebook-share-button,
+.hatena-bookmark-button,
+.twitter-share-button {
+    border-radius: 3px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    font: normal normal normal 11px/18px ,Arial,sans-serif;
+    height: 26px;
+    line-height: 26px;
+    outline: 0;
+    padding: 1px 10px 1px 9px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    zoom: 1;
+}
+.facebook-share-button { background-color: #1877f2; }
+.hatena-bookmark-button { background-color: #00a4de; }
+.twitter-share-button { background-color: #1b95e0; }
