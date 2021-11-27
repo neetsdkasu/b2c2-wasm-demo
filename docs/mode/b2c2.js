@@ -124,6 +124,10 @@ CodeMirror.defineMode("b2c2", function(conf, parserConf) {
         .concat(opKeyword)
         .concat(funcKeyword);
 
+    CodeMirror.registerHelper("hintWords", "b2c2",
+        keywords.concat(op1Symbol).concat(op2Symbol).concat(op3Symbol)
+    );
+
     const numLiteralRegex = /^-?\d+/;
     const hexLiteralRegex = /^&[hH][0-9A-Fa-f]+/i;
 
