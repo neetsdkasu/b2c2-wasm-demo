@@ -4,11 +4,11 @@
 CodeMirror.defineMode("casl2", function(conf, parserConf) {
     "use strict";
 
-    const COMET2CMD = null; // "keyword";
+    const COMET2CMD = "keyword";
     const CASL2CMD = "builtin";
-    const LABEL = "variable-3";
-    const REGISTER = null; // "atom";
-    const INDEX_REG = null; // "atom";
+    const LABEL = "variable";
+    const REGISTER = "atom";
+    const INDEX_REG = "atom";
     const NUMBER = "number";
     const STRING = "string";
     const LITERAL_NUMBER = "meta";
