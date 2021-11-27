@@ -1,6 +1,6 @@
 [package]
 name = "b2c2-wasm-demo"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Leonardone <neetsdkasu@gmail.com>"]
 edition = "2018"
 description = "b2c2のWebデモ" 
@@ -15,9 +15,9 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-wasm-bindgen = "0.2.63"
-b2c2-parser = { git="https://github.com/neetsdkasu/b2c2.git", tag="v1.0.4-rc", package="b2c2-parser" }
-b2c2-compiler = { git="https://github.com/neetsdkasu/b2c2.git", tag="v1.0.4-rc", package="b2c2-compiler" }
+wasm-bindgen  = "0.2.63"
+b2c2-parser   = { git = "https://github.com/neetsdkasu/b2c2.git", package = "b2c2-parser"  , tag = "v1.0.4" }
+b2c2-compiler = { git = "https://github.com/neetsdkasu/b2c2.git", package = "b2c2-compiler", tag = "v1.0.4" }
 
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
