@@ -2,11 +2,11 @@ import init_b2c2, { compile_basic_to_casl2 } from "./b2c2_wasm_demo.js";
 
 const b2c2Src = CodeMirror.fromTextArea(
     document.getElementById("b2c2_src"),
-    { lineNumbers: true, mode: "b2c2" }
+    { lineNumbers: true, mode: "b2c2", extraKeys: {"Ctrl-Space": "autocomplete"} }
 );
 const casl2Src = CodeMirror.fromTextArea(
     document.getElementById("casl2_src"),
-    { lineNumbers: true, mode: "casl2" }
+    { lineNumbers: true, mode: "casl2", extraKeys: {"Ctrl-Space": "autocomplete"} }
 );
 
 function compile() {
