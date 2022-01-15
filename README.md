@@ -25,10 +25,10 @@ $ rustup toolchain list
 stable-i686-pc-windows-msvc (default)
 
 $ rustc --version
-rustc 1.56.1 (59eed8a2a 2021-11-01)
+rustc 1.58.0 (02072b482 2022-01-11)
 
 $ cargo --version
-cargo 1.56.0 (4ed5d137b 2021-10-04)
+cargo 1.58.0 (7f08ace4f 2021-11-24)
 
 $ wasm-pack --version
 wasm-pack 0.10.1
